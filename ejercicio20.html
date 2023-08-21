@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let n, acu = [], contador, c = 1;
+
+        for(let i = 0; i < 5; i++){
+            n = Number(prompt("Ingrese 5 numeros pares: \n n°" + c++))
+
+            if(n %2 == 0){
+                contador = acu.push(n)
+            }
+            else{
+                alert("El numero ingresado no es par")
+
+                i = i - 1;
+                c = c - 1;
+            }
+        }
+
+        alert("los numeros ingresados fueron: " + acu)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

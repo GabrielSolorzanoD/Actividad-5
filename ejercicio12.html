@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let cantidad = Number(prompt("Ingrese la cantidad de libros a llevar:"))
+        let precio, contP, total, descuento, i, e;
+        let n = 1;
+        let array= []
+        
+
+        if(cantidad > 0 && cantidad % 1 == 0 && cantidad != ""){
+
+            for(let i = 0; i < cantidad; i++){
+
+                precio = Number(prompt("Ingrese el precio del libro n°" + (n++) + ": "));
+
+                if(precio > 0){
+
+                    contP = array.push(precio);
+                }
+                else{
+                    i =  i - 1;
+                    n = n - 1;
+
+                    alert("El precio ingresado no es valido");
+                }
+            }
+
+            if(cantidad == 3){
+                total = array.reduce((p,c)=>p+c);
+                e = total * 0.03;
+                descuento = (total - e);
+
+                alert("El total a pagar por los 3 libros es: " + total + "$\nmenos el 3% serian: " + descuento + "$");
+            }
+            else if(cantidad > 3 && cantidad <= 10){
+                total = array.reduce((p,c)=>p+c);
+                e = total * 0.05;
+                descuento = (total - e);
+
+                alert("El total a pagar por los " + cantidad + " libros es: " + total + "$\nmenos el 5% serian: " +  descuento + "$");
+            }
+            else if(cantidad > 10){
+                total = array.reduce((p,c)=>p+c);
+                e = total * 0.10;
+                descuento = (total - e);
+                 
+                alert("El total a pagar por los " + cantidad + " libros es: " + total + "$\nmenos el 10% serian: " +  descuento + "$");
+            }
+            else {
+                alert("El total a pagar es: " + array[0] + "$")
+            }
+            
+        }
+        else{
+            alert("La cantidad ingresada no es valida")
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

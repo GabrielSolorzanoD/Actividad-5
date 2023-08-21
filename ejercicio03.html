@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let sueldo = Number(prompt("Ingrese el sueldo: ")) 
+        let venta, ventas, comision = 0, total, contador = 0 
+       
+        if(sueldo > 0){
+
+            while(contador < 3){
+                venta = Number(prompt("ingrese el valor de la venta: "));
+
+                if(venta > 0){
+                    ventas = parseInt(venta);
+                    comision = comision + ventas;
+                    contador = contador + 1;
+
+                }
+                else{
+                    alert("El valor ingresado es incorrecto");
+                }
+                
+            }
+            comision = (comision * 0.10);
+            total = sueldo + comision;
+            alert("El total del mes es: " + total);
+        }
+        else{
+            alert("El valor ingresado es incorrecto")
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

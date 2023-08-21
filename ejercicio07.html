@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let numeros
+        let contador;
+        let memoria = [];
+        let total;
+        let a = 1
+
+
+        for( let i = 0; i < 4; i++){
+            numeros = Number(prompt("Introduzca 4 numeros: \n" + "n°" + a++));
+
+            contador = memoria.push(numeros);
+        }
+        total = memoria[0] * memoria[1] * memoria[2] * memoria[3];
+        
+        alert("El resultado es: " + total);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

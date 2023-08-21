@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let dato = Number(prompt("Introduzca el numero a factorizar: "))
+
+        function factorialize(dato) {
+            if (dato === 0 || dato === 1)
+                return alert("El resultado es: 1" );
+            for (let i = dato - 1; i >= 1; i--) {
+                dato *= i;
+            }
+            return alert("El resultado es: " + dato);
+        }
+        factorialize(dato);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
